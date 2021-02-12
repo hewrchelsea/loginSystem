@@ -1,0 +1,126 @@
+.pageOne .website-header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pageOne .website-header .logo{
+    width: 150px;
+    margin-left: 5%;
+}
+.pageOne .website-header .website-navi{
+    margin-right: 5%;
+}
+.pageOne .website-header .website-navi a{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 40px;
+    font-weight: 600;
+    border-bottom: 3.5px solid transparent;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.pageOne .website-header .website-navi .active, .pageOne .website-header .website-navi a:hover{
+    border-color:#E51E1F;
+}
+.pageOne .website-header .burger{
+    width: 40px;
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 5%;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.pageOne .website-header .closeBurger{
+    margin-right: 5%;
+    cursor: pointer;
+    z-index: 12;
+    display: none;
+    font-size: 6rem;
+    user-select: none;
+    display: none;
+}
+
+
+.pageOne .website-header .burger .a{
+    width: 40px;
+    height: 4px;
+    border-radius: 10px;
+    background: #000;
+    display: flex;
+}
+.pageOne .website-header .burger .a:nth-child(2) {
+    width: 60%;
+    margin-left: 40%;
+}
+
+.burgerDropdown{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.burgerDropdown section{
+    height: 200px;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+-webkit-box-shadow: 0px 33px 78px -46px rgba(255,255,255,1);
+-moz-box-shadow: 0px 33px 78px -46px rgba(255,255,255,1);
+box-shadow: 0px 33px 78px -46px rgba(255,255,255,1);
+
+
+}
+.burgerDropdown section .item{
+    width: 28%;
+}
+
+.burgerDropdown section .item .title{
+    color: #a3acb9;
+    font-weight: 400;
+}
+
+.burgerDropdown section .item a{
+    display: block;
+    margin-top:10px;
+}
+.burgerDropdown section .copy{
+    color: #000;
+}
+
+
+@media (max-width:600px) {
+    .pageOne .website-header .website-navi{
+        display: none;
+    }
+    .pageOne .website-header .burger{
+        display: flex;
+    }
+}
+@media (min-width:600px) {
+    .closeBurger, .burgerDropdown{
+        display: none!important;
+    }
+    html{
+        overflow-y:unset!important;
+    }
+}
+
+
+@media (max-width:420px) {
+.burgerDropdown section .item{
+    width: 40%;
+}
+}
